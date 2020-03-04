@@ -1,5 +1,7 @@
-# Java
-
+# Java Folder Layout 
+***
+<p>This README file shows the general structure of the JAVA Folder.  Within each of the subfolders there will be a separate README with additional information about what is contained there as well as possible other infomration about the files. For example,  there may be a table that shows the concepts or technology used in the file or project.  
+<p/>
 
 1. ### Java Basics - 
  * This will contain code for reviewing the basics of the Java Programming Language.
