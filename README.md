@@ -4,7 +4,7 @@
 1. ### Java Basics - 
  * This will contain code for reviewing the basics of the Java Programming Language.
  * Basic items of the language like control structures.
-2. #### Java Classes -
+2. ### Java Classes -
  *  Shows some basic classes it will have some driver files to test them.
 3. ### Simple Java graphics
 4. ### Java Swing -
