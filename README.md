@@ -8,7 +8,9 @@
  * Basic items of the language like control structures.
 2. ### Java Classes -
  *  Shows some basic classes it will have some driver files to test them.
-3. ### Simple Java Graphics
+3. ### Simple Java Graphics -
+ * **String Cube** Draws a simple string Cube
+ * **Four Corneres** Draws a curves using lines to approximate the curve
 4. ### Java Swing -
 4. ### Java Applications -
 5. ### Java Servlets - 
