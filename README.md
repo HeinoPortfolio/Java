@@ -9,8 +9,10 @@
 2. ### Java Classes -
  *  Shows some basic classes it will have some driver files to test them.
 3. ### Simple Java Graphics -
- * **String Cube** Draws a simple string Cube
- * **Four Corners** Draws curves using lines to approximate the curve
+ * **String Cube**  - Draws a simple string Cube
+ * **Four Corners**  - Draws curves using lines to approximate the curve
+ * **Concentric Circles** - Draws a series of 12 circles from the center of the screen out.
+ * **Bulls Eye** -  Draws a simple bullseye using alternate colors.
 4. ### Java Swing -
 4. ### Java Applications -
 5. ### Java Servlets - 
