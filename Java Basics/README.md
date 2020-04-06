@@ -10,3 +10,5 @@
 :-----:|:-----:
 Scanner| I/O Console
 BufferedReader|  I/O Console
+
+4. **Number Guess** -  A simple number guessing game that prompts the user to enter a number to guess the random number that was generated. The numbers range from 0 to 10.  There is a maximum of 5  guesses before the game is over.
