@@ -8,3 +8,7 @@
 
 4. **Bulls Eye** -  Draws a simple bullseye using alternate colors.
   
+# Resources
+**The programs that are found in this section have been problems taken from the following textbook, unless otherwise noted.**
+
+Deitel, P.J., & Deitel, H.M., (2007). Java How to Program 7th ed. Pearson. 
