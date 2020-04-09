@@ -11,7 +11,7 @@
 5. **Square Spiral** - Will draw a square spriral that will fill the panel.
 
 
-#### **Note:  - There are JAR executable included with some of the files. It may need to be configured to run on your system. Also, if you are in doubt about how to set up the JAR, DO NOT RUN IT!!!!!!!**
+#### **Note:  - There are JAR executables included with some of the files. It may need to be configured to run on your system. Also, if you are in doubt about how to set up the JAR, DO NOT RUN IT!!!!!!!**
 
 # Resources
 **The programs that are found in this section are problems taken from the following textbook, unless otherwise noted.**
