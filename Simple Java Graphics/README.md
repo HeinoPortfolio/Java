@@ -11,6 +11,6 @@
 5. **Square Spiral** - Will draw a square spriral that will fill the panel.
   
 # Resources
-**The programs that are found in this section have been problems taken from the following textbook, unless otherwise noted.**
+**The programs that are found in this section are problems taken from the following textbook, unless otherwise noted.**
 
 Deitel, P.J., & Deitel, H.M., (2007). Java How to Program 7th ed. Pearson. 
