@@ -4,7 +4,7 @@
 
 2. **Perfect Number** - Determine if a number is a perfect number. A perfect number is a number whose factors including 1 add up to the number.
 
-3. **GCDEuclid** - Program to find the GCD of two numbers using Euclid's algorithm.
+3. **GCDEuclid** - Program to find the GCD of two numbers using Euclid's algorithm.  It uses two different ways to read input from the console (Scanner and BufferedReader).
   
 **Concept or Technology Used**|**Description**
 :-----:|:-----:
