@@ -13,9 +13,15 @@ package gameofcraps;
 import java.util.Scanner;
 import java.util.Random;
 
-
 public class Craps 
 {
+	/**************************************************************************
+	 * Purpose:		To get the wager from the user.
+	 * Receives:    int totalmoney -  total money the player has.
+	 * 				Scanner wagerScn -  to take in the wager amount.
+	 * Returns: 	int wager
+	 * Post: 		A correct wager has been returned.	 
+	 * **********************************************************************/
 	public static int getWager(int totalmoney, Scanner wagerScn)
 	{
 		int wager = 0;
@@ -39,6 +45,16 @@ public class Craps
 		return wager;		
 	} // end getWager.
 	
+	/**************************************************************************
+	 * Purpose:		To play the game.  Will be the main method/driver of the
+	 * 				program
+	 * Receives:    int totalmoney 		-  	total money the player has.
+	 * 				int point 			-	the number the player needs to get 
+	 * 				Random rand 		-	the random number generator 		
+	 * 				Scanner  			-   to take in the roll again.
+	 * Returns: 	int totalmoney		- 	money won or lost in the round
+	 * Post: 		A correct total money has been returned.	 
+	 * **********************************************************************/
 	public static int playGame(int totalmoney, int point, int wager, Random rand, Scanner rollagain)
 	{
 		boolean done = true;
@@ -88,9 +104,9 @@ public class Craps
 		int totalmoney = 100;							// Starting wager amount
 		int wager = 0;									// Entered wager amount
 		String yesorno;									// yes or no to continue
-		int die1 = 0;							
-		int die2 = 0;
-		int point =0;
+		int die1 = 0;									// Die 1					
+		int die2 = 0;									// Die 2
+		int point =0;									// Point to be made
 		
 		System.out.print("Welcome to the game of Craps! \nThe rules are simple: \n\n");
 		System.out.print("\t 1. You will role two die.\n\t 2. If you roll a 7 or 11 on the first role you win."
@@ -138,21 +154,29 @@ public class Craps
 				totalmoney = playGame(totalmoney, point, wager, rand, rollagain);	
 			}
 			
-			System.out.print("\nDo you want to play again?  Enter Y or N: ");
-			yesorno = goagain.nextLine();
-			
-			if(yesorno.toUpperCase().equalsIgnoreCase("N"))
+			if(totalmoney != 0)
 			{
+				System.out.print("\nDo you want to play again?  Enter Y or N: ");
+				yesorno = goagain.nextLine();
+			
+				if(yesorno.toUpperCase().equalsIgnoreCase("N"))
+				{
+					cont = false;
+					System.out.println("The game is over!!!!!!!!");
+				}
+			}
+			else
+			{
+				System.out.print("You do not have enough money to continue. "
+						+ "\n  The game is over!!!!!!!!!!");
 				cont = false;
-				System.out.println("The game is over!!!");
 			}
 		}while(cont);
 		
+		// Close the streams.
 		goagain.close();
 		wagerScn.close();
 		rollagain.close();
-		
-
 	}
 
 }
