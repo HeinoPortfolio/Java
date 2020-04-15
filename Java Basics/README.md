@@ -13,4 +13,4 @@ BufferedReader|  I/O Console
 
 4. **Number Guess** -  A simple number guessing game that prompts the user to enter a number to guess the random number that was generated. The numbers range from 0 to 10.  There is a maximum of 5  guesses before the game is over.
 
-5. **Game of Craps** - A simple game of Craps. The user starts out $100 and they can play until they quit or run out of money.
+5. **Game of Craps** - A simple game of Craps. The user starts out $100 and they can play until they quit or run out of money. ***Note:  A few additions could be added to the program.  Some other error checking could be applied but overall logic is complete.***
