@@ -1,10 +1,29 @@
+/* TicTacToe.javq
+ * 
+ * 	Author: 	Heino
+ * 
+ * 	Purpose:	This program sets up a simple Tic Tac Toe game.  It does not 
+ * 				use a two dimensional array.  It will use a simple one dimen-
+ * 				sional array.
+ * 
+ * **************************************************************************/
+
 package tictactoe;
 
 import java.util.Scanner;
 import java.lang.Integer;
 
-public class TicTacToe {
-
+public class TicTacToe 
+{
+	/* 
+	 * 	Purpose:  		This method checks to see if the the move results in a win
+	 *  Receives:		String[] boardArr - the array holding the moves.
+	 *  Returns:		boolean gameover -  false if the game has been true 
+	 *  				otherwise.
+	 *  
+	 *   Precondition:	The number of squares has not been exceeded.
+	 *   Postcondition:	The gameover has been successfully returned
+	 ************************************************************************ */
 	public static boolean checkForWin(String[] boardArr, int turn, String xoro)
 	{	
 		boolean gameover = true;
@@ -12,58 +31,59 @@ public class TicTacToe {
 		if (turn > 2)
 		{
 			//Check the winning paths.*******************************************
-			// Check the rows for the win
+			// Check the rows for the win.*****************************************
 			if(boardArr[0].equals(boardArr[1]) && boardArr[1].equals(boardArr[2]))
 			{
-				System.out.println("Player " + xoro + " is the winner!!!R1");
+				System.out.println("Player " + xoro + " is the winner!!! Row: 1");
 				gameover = false;
 			}
-			if(boardArr[3].equals(boardArr[4]) && boardArr[4].equals(boardArr[5]))
+			else if(boardArr[3].equals(boardArr[4]) && boardArr[4].equals(boardArr[5]))
 			{
-				System.out.println("Player " + xoro + " is the winner!!!R2");
+				System.out.println("Player " + xoro + " is the winner!!! Row: 2");
 				gameover = false;
 			}
-			if(boardArr[6].equals(boardArr[7]) && boardArr[7].equals(boardArr[8]))
+			else if(boardArr[6].equals(boardArr[7]) && boardArr[7].equals(boardArr[8]))
 			{
-				System.out.println("Player " + xoro + " is the winner!!!R3");
+				System.out.println("Player " + xoro + " is the winner!!! Row: 3");
 				gameover = false;
 			}
-			
-			//Check the columns for a win
-			if(boardArr[0].equals(boardArr[3]) && boardArr[3].equals(boardArr[6]))
+			//Check the columns for a win.*********************************************
+			else if(boardArr[0].equals(boardArr[3]) && boardArr[3].equals(boardArr[6]))
 			{
-				System.out.println("Player " + xoro + " is the winner!!!C1");
+				System.out.println("Player " + xoro + " is the winner!!! Column: 1");
 				gameover = false;
 			}
-			
-			if(boardArr[1].equals(boardArr[4]) && boardArr[4].equals(boardArr[7]))
+			else if(boardArr[1].equals(boardArr[4]) && boardArr[4].equals(boardArr[7]))
 			{
-				System.out.println("Player " + xoro + " is the winner!!!C2");
+				System.out.println("Player " + xoro + " is the winner!!! Column: 2");
 				gameover = false;
 			}
-			
-			if(boardArr[2].equals(boardArr[5]) && boardArr[5].equals(boardArr[8]))
+			else if(boardArr[2].equals(boardArr[5]) && boardArr[5].equals(boardArr[8]))
 			{
-				System.out.println("Player " + xoro + " is the winner!!!C3");
+				System.out.println("Player " + xoro + " is the winner!!! Column: 3");
 				gameover = false;
 			}
-			
-			// Check the diagonal for a win.
-			if(boardArr[0].equals(boardArr[4]) && boardArr[4].equals(boardArr[8]))
+			// Check the diagonal for a win.******************************************
+			else if(boardArr[0].equals(boardArr[4]) && boardArr[4].equals(boardArr[8]))
 			{
-				System.out.println("Player " + xoro + " is the winner!!! D1");
+				System.out.println("Player " + xoro + " is the winner!!! Diagonal: 1");
 				gameover = false;
 			}
-			if(boardArr[4].equals(boardArr[4]) && boardArr[4].equals(boardArr[6]))
+			else if(boardArr[2].equals(boardArr[4]) && boardArr[4].equals(boardArr[6]))
 			{
-				System.out.println("Player " + xoro + " is the winner!!!D2");
+				System.out.println("Player " + xoro + " is the winner!!! Diagonal: 2");
 				gameover = false;
 			}
 		}
-		
 		return gameover;
 	}
 	
+	/* 
+	 * 	Purpose:  		This method prints the game board.
+	 *  Receives:		String[] boardArr - the array holding the moves.
+	 *  Returns:		Nothing.
+	 * 
+	 ************************************************************************ */
 	public static void printBoard(String[] boardArr)
 	{
 		System.out.println(" __  __  __");
@@ -94,41 +114,50 @@ public class TicTacToe {
 		//Print the board
 		printBoard(boardArr);
 		
-		while(gameover)
+		while(gameover && turn < 9)
 		{
 			System.out.println("\nIt is player " + xoro + "'s turn!");
 			System.out.print("Please enter a position: ");
 			pos = positionScn.next();
-			posInt = Integer.parseInt(pos);
 			
-			//Check to see if the space is already occupied.
-			if(boardArr[posInt] == "X"  || boardArr[posInt] == "O")
+			if((int)pos.charAt(0) >= 48 && (int)pos.charAt(0) <= 56 )
 			{
-				System.out.println("That position is alredy used. \nPlease pick another square!!");
-			}
-			else
-			{	
-				//Place a new X in the array.
-				boardArr[posInt] = xoro;
-				printBoard(boardArr);
-				turn++;
-				gameover = checkForWin(boardArr, turn, xoro);
-				
-				if(gameover != false)
+				posInt = Integer.parseInt(pos);
+			
+				//Check to see if the space is already occupied.
+				if(boardArr[posInt] == "X"  || boardArr[posInt] == "O")
 				{
-					if(xoro == "X")
+					System.out.println("That position is already used. \nPlease pick another square!!");
+				}
+				else
+				{	
+					//Place a new X in the array.
+					boardArr[posInt] = xoro;printBoard(boardArr);
+					turn++;
+					gameover = checkForWin(boardArr, turn, xoro);
+				
+					if(gameover != false)
 					{
-						xoro = "O";
-					}
-					else
-					{
-						xoro = "X";
+						if(xoro == "X")
+						{
+							xoro = "O";
+						}
+						else
+						{
+							xoro = "X";
+						}
 					}
 				}
-				
+			} // if
+			else
+			{
+				System.out.println("This is not a valid cell position! Please choose again.");
 			}
-
 		} // end while
+		if(turn == 9  && gameover != false)
+		{
+			System.out.println("\nThere are no more moves to be made. Game over.");
+		}
 		
 		positionScn.close();
 	}
