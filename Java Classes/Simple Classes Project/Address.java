@@ -1,6 +1,11 @@
+/*Address.java 
+ * 
+ *  Purpose: 	This file defines an address class. It will hold 
+ *  			information that is relevant to an address. It 
+ *  			will hold elements like street, city, state, etc.  
+ * 
+ * */
 package dataclasses;
-
-
 
 
 public class Address 
