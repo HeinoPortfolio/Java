@@ -52,6 +52,7 @@ public class TestPerson {
 		
 		newemp.setAddr(addr);
 		newemp.setEmployeeID("45371");
+		newemp.setSSN("11111");
 		newemp.setHourlyRate(12.35);
 		newemp.setHoursWorked(40);
 		System.out.println("\n\nValue of Employee: \n" + newemp);
@@ -59,6 +60,28 @@ public class TestPerson {
 		// Check calc pay.
 		newemp.calculatePay();
 		System.out.println("\n\n\n\nValue of Employee: \n" + newemp);
+		
+		
+		// Hourly employee.
+		HourlyEmployee newemp1 = new HourlyEmployee();
+		newemp1.setSSN("12345");
+		
+		System.out.println("Is the same: " + newemp.equals(newemp));
+		
+		
+		// Salaried employee
+		SalariedEmployee salemp = new SalariedEmployee();
+		
+		salemp.setAddr(addr);
+		salemp.setFirst("Lucy");
+		salemp.setLast("Heino");
+		System.out.println("\n\nValue of Employee: \n" + salemp);
+		System.out.println("Is the same: " + newemp.equals(salemp));
+		
+		//Test Conact
+		Contact newcon = new Contact();
+		newcon.setContactType("Friend");
+		System.out.println("\n\nValue of Employee: \n" + newcon);
 	}
 
 }
