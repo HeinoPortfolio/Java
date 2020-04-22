@@ -117,11 +117,32 @@ public abstract class Employee extends Person
 		return outstr;
 	}
 	
+	/* *********************************************************
+	 *  Purpose:	See if two employees are equal
+	 *  Receives:	Employee otheremp
+	 *  Returns:	boolean
+	 *  Post:		Either true if the employee is equal or false
+	 *  			if they are not.
+	 * *********************************************************/
+	public boolean equals(Employee otheremp)
+	{
+		return this.socialsecnum.equals(otheremp.socialsecnum);
+	}
+	
+	/*
+	 *  Purpose:	Method to update the total pay for the employee.
+	 *  Receives:	pay - double
+	 *  Post:		The total pay for the employee has been updated.
+	 * */
 	public void updateTotalPay(double pay)
 	{
 		this.totalpay = this.totalpay + pay;
 	}
 	
-	
+	/*
+	 *  Purpose:	Method to calculate the pay for the employee.
+	 *  Receives:	pay - double
+	 *  Post:		The total pay for the employee has been updated.
+	 * */
 	public abstract double calculatePay();
 }
