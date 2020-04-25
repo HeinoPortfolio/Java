@@ -8,7 +8,7 @@
 package dataclasses;
 
 
-public class Address 
+public class Address extends DataElement
 {
 	private String street;					// Holds the street address
 	private String city;					// Holds the city
@@ -200,19 +200,6 @@ public class Address
 	}
 	
 	
-	// Methods of the class.*****************************
-	/* *********************************************************
-	 *  Purpose:	See if two addresses are equal
-	 *  Receives:	Address addr
-	 *  Returns:	boolean
-	 *  Post:		Either true if the address is equal or false
-	 *  			if they are not.
-	 * *********************************************************/
-	public boolean equals(Address addr)
-	{
-		return (this.street.equals(addr.street) && (this.city.equals(addr.city) && this.state.equals(addr.state)));
-	}
-	
 	/* *********************************************************
 	 *  Purpose:	Output address information unformatted
 	 *  Receives:	None
@@ -233,6 +220,50 @@ public class Address
 				+ this.ZIP + "\n" +  this.country ; 
 		
 		return outstr;
+	}
+
+	@Override
+	public boolean equals(DataElement otherElement) 
+	{
+		
+		Address newaddr = (Address) otherElement;
+		boolean result = false;
+		
+		result = ((this.street.equals(newaddr.street)) && (this.city.equals(newaddr.city)) 
+				&& (this.state.equals(newaddr.state)) && (this.ZIP.equals(newaddr.ZIP)));
+		
+		return result;
+	
+	}
+
+	@Override
+	public int compareTo(DataElement otherElement) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void makeCopy(DataElement otherElement) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	//Makes a copy of an Address object
+	@Override
+	public DataElement getCopy() 
+	{
+		Address tempAddr = new Address();
+		
+		tempAddr.street = this.street;
+		tempAddr.city = this.city;
+		tempAddr.state = this.state;
+		tempAddr.aptNum = this.aptNum;
+		tempAddr.country = this.country;
+		tempAddr.county = this.county;
+		tempAddr.ZIP = this.ZIP;
+		
+		return tempAddr;
+		
 	}
 } // end Address.
 
