@@ -1,6 +1,7 @@
 package datastructures;
 
 import dataclasses.*;
+import datastructures.LList.LinkedListNode;
 
 
 public abstract class LList
@@ -200,8 +201,52 @@ public abstract class LList
 		return index;
 	}
 	
+	public void removeItemAtIndex(int index) 
+	{
+		
+		
+		LinkedListNode current;
+		
+		
+		current = first;
+		
+		
+		if(index  < 0 || index >= this.count)
+		{
+			System.err.println("List index out of bounds.  Cannot perform the operation!");
+		}
+		else if(first == null)
+		{
+			System.err.println("List is empty!.  Cannot perform the operation!");
+		}
+		else if (index ==  0)
+		{
+
+			first = first.link;
+		}
+		
+		else
+		{
+			
+			current = this.first;
+			
+			for(int i = 0; i < index - 1; i++ )
+			{
+				current = current.link;
+			}
+			
+			current.link = current.link.link;
+			
+		}
+		
+		this.count--;
+			
+	} // end RemoveItemAtIndex
+	
 	//Abstract methods.*******************************************************
 	public abstract boolean search(DataElement searchItem);
+	
+	
 	
 	
 	public abstract void deleteItem(DataElement deleteItem);
