@@ -237,9 +237,16 @@ public class Address extends DataElement
 	}
 
 	@Override
-	public int compareTo(DataElement otherElement) {
-		// TODO Auto-generated method stub
-		return 0;
+	public int compareTo(DataElement otherElement) 
+	{
+		Address otherAddr;
+		otherAddr = (Address)otherElement;
+		int difference = 0;
+		
+		//System.out.println("The type is: " + otherAddr.getClass() + "\n Contents");			// REMOVE
+		difference = this.street.compareTo(otherAddr.street);
+		
+		return difference;
 	}
 
 	@Override
