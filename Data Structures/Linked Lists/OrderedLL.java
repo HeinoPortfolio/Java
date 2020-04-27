@@ -4,18 +4,36 @@ import dataclasses.DataElement;
 
 public class OrderedLL extends LList 
 {
-
+	/* ***************************************************************
+	 * Constructor for the list
+	 * Receives: Nothing.  No parameters are passed
+	 * Post: The list has been created.  
+	 *****************************************************************/
 	public OrderedLL() 
 	{
 		super();
 	}
-
+	
+	/******************************************************************
+	 * Copy constructor
+	 * Purpose:  	To make a copy of another list.
+	 * Receives:	UnorderedLL object (to be copied)
+	 * Post:		The list parameter has been copied and copy has been 
+	 * 				made   
+	 *******************************************************************/
 	public OrderedLL(LList tocopy) 
 	{
 		super(tocopy);
 		
 	}
 	
+	/******************************************************************
+	 * Purpose: 	Inserts the element into the list .
+	 * Receives:	DataElement
+	 * Returns:		Nothing
+	 * Post:		Element has been inserted into the correct position 
+	 * 				and the count of nodes has been updated..  
+	 ******************************************************************/
 	public void insertElement(DataElement insertItem)
 	{
 		LinkedListNode current ;
@@ -54,6 +72,12 @@ public class OrderedLL extends LList
 		
 	} // InsertElement
 	
+	/******************************************************************
+	 * Purpose: 	Searches the element that matches given element.
+	 * Receives:	DataElement
+	 * Returns:		boolean
+	 * Post:		True if the item is in the list.  
+	 ******************************************************************/
 	@Override
 	public boolean search(DataElement searchItem) 
 	{
@@ -80,7 +104,14 @@ public class OrderedLL extends LList
 		return found;
 	}
 
-	
+	/******************************************************************
+	 * Purpose: 	Deletes the element from the list .
+	 * Receives:	DataElement
+	 * Returns:		Nothing
+	 * Post:		Element has been deleted matching the given 
+	 * 				DataElement and the count of nodes has been 
+	 * 				updated.  
+	 ******************************************************************/
 	@Override
 	public void deleteItem(DataElement deleteItem) 
 	{
@@ -144,10 +175,7 @@ public class OrderedLL extends LList
 				} // else
 			} // else inner
 		} // else
-		
-		
 	}
-
 }
 
 

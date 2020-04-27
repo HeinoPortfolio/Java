@@ -4,17 +4,34 @@ import dataclasses.DataElement;
 
 public class UnorderedLL extends LList 
 {
-
+	/* ***************************************************************
+	 * Constructor for the list
+	 * Receives: Nothing.  No parameters are passed
+	 * Post: The list has been created.  
+	 *****************************************************************/
 	public UnorderedLL() 
 	{
 		super();
 	}
 	
+	/******************************************************************
+	 * Copy constructor
+	 * Purpose:  	To make a copy of another list.
+	 * Receives:	UnorderedLL object (to be copied)
+	 * Post:		The list parameter has been copied and copy has been 
+	 * 				made   
+	 *******************************************************************/
 	public UnorderedLL(UnorderedLL ull)
 	{
 		super(ull);
 	}
 
+	/******************************************************************
+	 * Purpose: 	Method to search for an item in the list
+	 * Receives:	DataElement
+	 * Returns:		boolean
+	 * Post:		True if the item is in the list.  
+	 ******************************************************************/
 	@Override
 	public boolean search(DataElement searchItem) 
 	{
@@ -36,6 +53,13 @@ public class UnorderedLL extends LList
 		
 	}
 	
+	/******************************************************************
+	 * Purpose: 	Inserts the element at index.
+	 * Receives:	int index, DataElement
+	 * Returns:		Nothing
+	 * Post:		Element at the given index has been inserted 
+	 * 				and the count of nodes has been updated..  
+	 ******************************************************************/
 	public void insertAtIndex(int index, DataElement insertItem)
 	{
 		int indexcnt = 0;
@@ -45,9 +69,7 @@ public class UnorderedLL extends LList
 		
 		
 		if (index < 0  || index > this.lenghtOfList())
-		{
 			System.err.println("Index is out of bounds.  Operation could not be completed!");		
-		}
 		else 
 		{
 			
@@ -56,9 +78,7 @@ public class UnorderedLL extends LList
 			
 			// Insert at the head of the list
 			if (index == 0)
-			{
 				this.insertFirst(insertItem);
-			}
 			else if(index == this.count)
 			{
 				System.out.println("ENTERED ELSE IF");
@@ -77,25 +97,26 @@ public class UnorderedLL extends LList
 					current = current.link;
 					
 					if(current == null)
-					{
 						break;
-					}
-					
+	
 					indexcnt++;
 				}
 				
 				// Assign value.
 				newNode.link = current;
 				prev.link = newNode;
-				this.count++;
-				
+				this.count++;			
 			} //else
 		} // else
 	}// insertItemAtIndex
-	
-	
-	
 
+	/******************************************************************
+	 * Purpose: 	Deletes the element that matches given element.
+	 * Receives:	DataElement
+	 * Returns:		Nothing
+	 * Post:		Element matching given DataElement has been deleted 
+	 * 				and the count of nodes has been updated..  
+	 ******************************************************************/
 	@Override
 	public void deleteItem(DataElement deleteItem) 
 	{
@@ -113,9 +134,7 @@ public class UnorderedLL extends LList
 				first = first.link;
 				
 				if (first ==null)
-				{
 					last = null;
-				}
 				count--;
 			}
 			else
@@ -127,9 +146,7 @@ public class UnorderedLL extends LList
 				while(current != null && !found)
 				{
 					if(current.info.equals(deleteItem))
-					{
 						found = true;
-					}
 					else
 					{
 						trail = current;
@@ -143,19 +160,11 @@ public class UnorderedLL extends LList
 					trail.link = current.link;
 					
 					if(last == current)
-					{
 						last = trail;
-						
-					}
 				}
 				else
-				{
 					System.out.println("Item is not in the list!");
-				}
 			}
-			
-			
 		}
 	}
-
 }
