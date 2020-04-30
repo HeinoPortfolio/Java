@@ -14,7 +14,8 @@
  * **Concentric Circles** - Draws a series of 12 circles from the center of the screen out.
  * **Bulls Eye** -  Draws a simple bullseye using alternate colors.
  * **Square Spiral** - Draws a simple square spiral.
-4. ### Java Swing -
+4. ### Java Swing -  Will have a series of GUIs and associated applications.
+* **Simple GUIs** -  These are simple applications that make use of Swing to allow for user interaction.  They are are not console based.
 4. ### Java Applications -
 5. ### Java Servlets - 
 6. ### Projects -
