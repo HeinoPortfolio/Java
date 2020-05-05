@@ -19,20 +19,40 @@ import javax.swing.border.Border;
 public class TicTacToePanel extends JPanel implements ActionListener
 {
 
-	private JButton[] xoroBtns;
-	private JButton resetBtn;
-	private JButton undoBtn;
-	protected final String[] btnLabels = {"1", "2", "3", "4", "5", "6","7", "8", "9"};
-	private int prevMove = -1;
-	private TicTacToeClass ttc = new TicTacToeClass();
-	private TicTacToeFrame ttf;
+	private JButton[] xoroBtns;										// Holds the buttons				
+	private JButton resetBtn;										// Reset button
+	private JButton undoBtn;										// Undo button
 	
+	// Holds the initial button values.  
+	protected final String[] btnLabels = {"1", "2", "3", "4", "5", "6","7", "8", "9"};
+	
+	// Holds the index of the previous move
+	private int prevMove = -1;	
+	
+	// Creates a new Tic Tac toe class - for processing.
+	private TicTacToeClass ttc = new TicTacToeClass();				
+	
+	/* ********************************************************************
+	 * Purpose:  	Creates a new TicTacToe Panel
+	 * Receives:	Nothing
+	 * Returns:		Nothing
+	 * Post:		The fa
+	 ******************************************************************* */
 	public TicTacToePanel(TicTacToeFrame ttf) 
 	{
 		this.createTicTacToeBaord();
-		this.ttf = ttf;
+		//this.ttf = ttf;
 	}
 
+	/* ********************************************************************
+	 * Purpose:  	Process Action Events
+	 * Receives:	Nothing
+	 * Returns:		Nothing
+	 * Post:		Events have been processed.
+	 * Note:		This method will process all events.  It will handle 
+	 * 				the Reset, Undo and updating of the board as well as 
+	 * 				elements that are associated Tic Tac Toe Class 
+	 ******************************************************************* */
 	@Override
 	public void actionPerformed(ActionEvent e) 
 	{
@@ -88,16 +108,31 @@ public class TicTacToePanel extends JPanel implements ActionListener
 						JOptionPane.PLAIN_MESSAGE);
 				
 				// Ask player if they want to play a game.
-				int answer = JOptionPane.showConfirmDialog(null, "Would You like to play again?  ", "PLay Again?"
+				int answer = JOptionPane.showConfirmDialog(null, 
+						"Would You like to play again?  ", "Play Again?"
 						,JOptionPane.YES_NO_OPTION);
+				
+				//See if the player wants to play again.
 				if(answer == JOptionPane.YES_OPTION)
 				{
 					this.resetBoard();
+				}
+				else
+				{
+					// Close the program.
+					System.exit(0);
 				}
 			}
 		}	
 	}
 	
+	/* ********************************************************************
+	 * Purpose:  	Creates the Tic Tac Toe board
+	 * Receives:	Nothing
+	 * Returns:		Nothing
+	 * Post:		The board has been created and all the components 
+	 * 				have been added to the panel
+	 ******************************************************************* */
 	public void createTicTacToeBaord()
 	{
 		
@@ -112,7 +147,6 @@ public class TicTacToePanel extends JPanel implements ActionListener
 		gc.gridx = 0;
 		gc.gridy = 0;
 		
-		//gc.fill = GridBagConstraints.BOTH;  					// REMOVE
 		gc.anchor = GridBagConstraints.CENTER;
 		gc.insets = new Insets(0,0,0,0);
 		
@@ -165,6 +199,13 @@ public class TicTacToePanel extends JPanel implements ActionListener
 		this.setBorder(BorderFactory.createCompoundBorder(outerBorder, innerBorder));	
 	}
 	
+	/* ********************************************************************
+	 * Purpose:  	Resets the Tic Tac Toe board
+	 * Receives:	Nothing
+	 * Returns:		Nothing
+	 * Post:		The board has been rest and all the components 
+	 * 				have been initialized on the panel
+	 ******************************************************************* */
 	public void resetBoard()
 	{
 		for (int nxt = 0; nxt < xoroBtns.length; nxt++)
@@ -176,6 +217,13 @@ public class TicTacToePanel extends JPanel implements ActionListener
 		ttc.resetBoardArray();
 	}
 	
+	/* ********************************************************************
+	 * Purpose:  	Locks the Tic Tac Toe board between games
+	 * Receives:	Nothing
+	 * Returns:		Nothing
+	 * Post:		The board has been locked and all the components 
+	 * 				have been also been locked.
+	 ******************************************************************* */
 	public void lockBoard()
 	{
 		for (int nxt = 0; nxt < xoroBtns.length; nxt++)
@@ -184,6 +232,14 @@ public class TicTacToePanel extends JPanel implements ActionListener
 		}
 	}
 	
+	/* ********************************************************************
+	 * Purpose:  	Undoes the last move made by the previous player
+	 * Receives:	int index - the last move of the player
+	 * Returns:		Nothing
+	 * Post:		The board has been reset to the state before the 
+	 * 				previous move and all the components have been reset 
+	 * 				to that state.
+	 ******************************************************************* */
 	public void undoMove(int index)
 	{
 		xoroBtns[index - 1].setText(btnLabels[index - 1]); 

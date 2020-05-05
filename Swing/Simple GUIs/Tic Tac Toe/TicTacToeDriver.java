@@ -1,3 +1,8 @@
+/*TicTacToeDriver. java
+ * 
+ *  Author:  	Heino
+ *  Purpose:	Main driver for the Tic Tac Toe game  
+ * */
 package tictactoegui;
 
 import java.awt.EventQueue;

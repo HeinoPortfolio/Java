@@ -12,7 +12,13 @@ public class TicTacToeFrame extends JFrame
 
 	private JPanel contentPane;
 	private TicTacToePanel buttonPanel;
-
+	
+	/* ********************************************************************
+	 * Purpose:  	Creates the Tic Tac Toe frame
+	 * Receives:	Nothing
+	 * Returns:		Nothing
+	 * Post:		The frame has been created
+	 ******************************************************************* */
 	public TicTacToeFrame() 
 	{
 		super("Tic Tac Toe Game");

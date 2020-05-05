@@ -4,13 +4,19 @@ import java.util.Arrays;
 
 public class TicTacToeClass 
 {
-		private String[] boardArray;
-		private String prevmove ;
-		private int undoMove = -1;
-		private int turn = 0;
-		private String xoro = "X";		
+		private String[] boardArray;				// Holds the moves for the game.
+		private String prevmove ;					// Holds the previous move X or O
+		private int undoMove = -1;					// THe position of the last move.
+		private int turn = 0;						// The turn	
+		private String xoro = "X";					// Player either X or O
 		
 		// Constructor.--------------------------------------
+		/* Constructor of the class.
+		 * Receives:	Nothing
+		 * Returns:		Nothing
+		 * Post:		The class has been instantiated and all variables have 
+		 * 				been correctly initialized.	  
+		 * *******************************************************************/
 		public TicTacToeClass() 
 		{
 			this.boardArray = new String[] {"0", "1","2", "3","4","5","6","7","8"};
@@ -18,6 +24,13 @@ public class TicTacToeClass
 			this.undoMove = -1;
 		}
 		
+		
+		/* ********************************************************************
+		 * Purpose:  	Swaps the player from X to O and vice versa
+		 * Receives:	Nothing
+		 * Returns:		Nothing
+		 * Post:		The player has been swapped
+		 ******************************************************************* */
 		public void changeXorO()
 		{
 			if(this.xoro == "X")
@@ -26,6 +39,13 @@ public class TicTacToeClass
 				this.xoro = "X";
 		}
 		
+		/* ********************************************************************
+		 * Purpose:  	Checks to see if there is a winner.  
+		 * Receives:	Nothing
+		 * Returns:		boolean - true or false otherwise.
+		 * Post:		the outcome has been returned true if the there is a 
+		 * 				winner, false otherwise.
+		 ******************************************************************* */
 		public boolean checkForWin()
 		{
 			boolean gameover = false;
@@ -56,6 +76,12 @@ public class TicTacToeClass
 			return gameover;
 		}
 		
+		/* ********************************************************************
+		 * Purpose:  	Sets the player from X to O and vice versa
+		 * Receives:	Nothing
+		 * Returns:		Nothing
+		 * Post:		The player has been changed.
+		 ******************************************************************* */
 		public void setPlayerTurn()
 		{
 			if(this.xoro == "X")
@@ -63,10 +89,26 @@ public class TicTacToeClass
 			else
 				this.xoro = "X";
 		}
+		
+		/* ********************************************************************
+		 * Purpose:  	Returns the player from X to O and vice versa
+		 * Receives:	Nothing
+		 * Returns:		String - player
+		 * Post:		The player has been returned an it is either and X or 
+		 * 				O.
+		 ******************************************************************* */
 		public String getXorO()
 		{
 			return this.xoro;
 		}
+		
+		/* ********************************************************************
+		 * Purpose:  	Sets the player move and updates the Board Array
+		 * Receives:	int position - the position to be updated
+		 * 				String move - the move either X or O.
+		 * Returns:		Nothing
+		 * Post:		The move has been recorded in the board array
+		 ******************************************************************* */
 		public void setMove(int position, String move)
 		{
 			
@@ -75,6 +117,12 @@ public class TicTacToeClass
 			this.prevmove = move;
 		}
 		
+		/* ********************************************************************
+		 * Purpose:  	Prints the board array.
+		 * Receives:	Nothing
+		 * Returns:		Nothing
+		 * Post:		The board array has been printed to the screen.
+		 ******************************************************************* */
 		public void printBoardArray()
 		{
 			for( String array : boardArray)
@@ -83,6 +131,14 @@ public class TicTacToeClass
 			}
 		}
 		
+		/* ********************************************************************
+		 * Purpose:  	Resets the board array and associated variables have 
+		 * 				beens set to its initial state
+		 * Receives:	Nothing
+		 * Returns:		Nothing
+		 * Post:		The board array has been reset along with all 
+		 * 				associated variables. 
+		 ******************************************************************* */
 		public void resetBoardArray()
 		{
 			// Reset board.
@@ -98,28 +154,53 @@ public class TicTacToeClass
 			this.xoro = "X";
 		}
 		
+		/* ********************************************************************
+		 * Purpose:  	Sets the turn count
+		 * Receives:	int turn
+		 * Returns:		Nothing
+		 * Post:		The turn has been set.
+		 * Note:		Was not used in the application but was used to 
+		 * 				test the class.
+		 ******************************************************************* */
 		public void setTurn(int turn)
 		{
 			this.turn = turn;
 		}
 		
+		/* ********************************************************************
+		 * Purpose:  	Updates the number of turns.
+		 * Receives:	Nothing
+		 * Returns:		Nothing
+		 * Post:		The number of turns have been updated.
+		 ******************************************************************* */
 		public void updateTurn() 
 		{
 			this.turn++;
 		}
-
+		
+		/* ********************************************************************
+		 * Purpose:  	Undoes the last move by the current player.
+		 * Receives:	Nothing
+		 * Returns:		Nothing
+		 * Post:		The player's move has been undone.
+		 ******************************************************************* */
 		public void undoMove()
 		{
 			this.xoro = this.prevmove;
 			this.boardArray[this.undoMove] = String.valueOf(this.undoMove); 
 		}
 		
+		/* ********************************************************************
+		 * Purpose:  	ToString method of the class
+		 * Receives:	Nothing
+		 * Returns:		Nothing
+		 * Post:		The string has been created and all associated 
+		 * 				information of the class has been appended to it.
+		 ******************************************************************* */
 		@Override
 		public String toString() 
 		{
 			return "\nTicTacToeClass [boardArray=" + Arrays.toString(boardArray) + "\nprevmove=" + prevmove
 					+ "\nundoMove=" + undoMove + "\nturn=" + turn + "\nxoro=" + xoro + "]";
 		}
-		
-		
 }
