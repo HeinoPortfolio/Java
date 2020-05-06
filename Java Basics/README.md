@@ -15,6 +15,6 @@ BufferedReader|  I/O Console
 
 5. **Game of Craps** - A simple game of Craps. The user starts out $100 and they can play until they quit or run out of money. ***Note:  A few additions could be added to the program.  Some other error checking could be applied but overall logic is complete.***
 
-6. **Tic Tac Toe** - This is a simple Tic Tac Toe game.  It requires two players to play.  This game does not have a computer enable version.
+6. **Tic Tac Toe** - This is a simple Tic Tac Toe game.  It requires two players to play.  This game does not have a computer enabled version.
 
 7. **Reverse String** - A simple way to reverse a string using some of the methods of the String class.  It does not use StringBuilder but it accomplishes the same effect.
