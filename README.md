@@ -5,6 +5,7 @@
 
 1. ### Appointment Application - 
   * An appoint application that has a uses a GUI, JavaFX, FXML to create an appointment application. 
+  * Will make use of locale settings.  Will dispaly some text in French if the user is located in a French speaking area.
 2. ### Java Basics - 
  * This will contain code for reviewing the basics of the Java Programming Language.
  * Basic items of the language like control structures.
