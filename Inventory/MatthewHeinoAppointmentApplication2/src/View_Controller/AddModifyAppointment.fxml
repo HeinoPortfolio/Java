@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="747.0" prefWidth="935.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller.AddModifyAppointmentController">
+   <children>
+      <HBox layoutX="-2.0" prefHeight="270.0" prefWidth="944.0">
+         <children>
+            <AnchorPane prefHeight="270.0" prefWidth="954.0" style="-fx-background-color: #0d5a99;">
+               <children>
+                  <TableView fx:id="appointmnetTable" layoutX="30.0" layoutY="41.0" prefHeight="199.0" prefWidth="875.0">
+                    <columns>
+                      <TableColumn fx:id="appointmentIDCol" prefWidth="110.0" text="Apppointment ID" />
+                      <TableColumn fx:id="titleCol" prefWidth="122.0" text="Title" />
+                        <TableColumn fx:id="descriptCol" prefWidth="120.0" text="Description" />
+                        <TableColumn fx:id="locationCol" prefWidth="75.0" text="Location" />
+                        <TableColumn fx:id="contactCol" prefWidth="83.0" text="Contact" />
+                        <TableColumn fx:id="typeCol" prefWidth="60.0" text="Type" />
+                        <TableColumn fx:id="startCol" prefWidth="111.0" text="Start Date/Time" />
+                        <TableColumn fx:id="endCol" prefWidth="175.0" text="End Date/ Time" />
+                        <TableColumn fx:id="custIDCol" prefWidth="82.0" text="Customer ID" />
+                    </columns>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </TableView>
+               </children>
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" />
+               </effect>
+            </AnchorPane>
+         </children>
+      </HBox>
+      <HBox layoutX="-2.0" layoutY="271.0" prefHeight="476.0" prefWidth="935.0" style="-fx-background-color: #6f7275;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <AnchorPane prefHeight="476.0" prefWidth="937.0">
+               <children>
+                  <Label layoutX="13.0" layoutY="57.0" prefHeight="27.0" prefWidth="158.0" text="Appointment ID:" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="529.0" layoutY="57.0" prefHeight="27.0" prefWidth="56.0" text="Title" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="titleTF" layoutX="626.0" layoutY="57.0" prefHeight="25.0" prefWidth="285.0">
+                     <effect>
+                        <DropShadow blurType="ONE_PASS_BOX" />
+                     </effect>
+                  </TextField>
+                  <Label layoutX="16.0" layoutY="106.0" prefHeight="27.0" prefWidth="109.0" text="Description" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="descripTF" layoutX="194.0" layoutY="107.0" prefHeight="25.0" prefWidth="285.0">
+                     <effect>
+                        <DropShadow blurType="ONE_PASS_BOX" />
+                     </effect>
+                  </TextField>
+                  <Label layoutX="531.0" layoutY="106.0" prefHeight="27.0" prefWidth="109.0" text="Location" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="apptIDTF" editable="false" layoutX="194.0" layoutY="57.0" promptText="Auto-generated">
+                     <effect>
+                        <DropShadow blurType="ONE_PASS_BOX" />
+                     </effect>
+                  </TextField>
+                  <Label layoutX="13.0" layoutY="155.0" prefHeight="27.0" prefWidth="92.0" text="Contact" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="contactCB" layoutX="194.0" layoutY="156.0" prefWidth="150.0">
+                     <effect>
+                        <DropShadow blurType="ONE_PASS_BOX" />
+                     </effect>
+                  </ComboBox>
+                  <Label layoutX="531.0" layoutY="155.0" prefHeight="27.0" prefWidth="92.0" text="Type" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="typeCB" layoutX="626.0" layoutY="157.0" prefHeight="25.0" prefWidth="209.0">
+                     <effect>
+                        <DropShadow blurType="ONE_PASS_BOX" />
+                     </effect>
+                  </ComboBox>
+                  <Label layoutX="13.0" layoutY="199.0" prefHeight="27.0" prefWidth="92.0" text="Start Date" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="dateDP" editable="false" layoutX="194.0" layoutY="201.0">
+                     <effect>
+                        <DropShadow blurType="ONE_PASS_BOX" />
+                     </effect>
+                  </DatePicker>
+                  <Label layoutX="380.0" layoutY="200.0" prefHeight="27.0" prefWidth="92.0" text="Start Time" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="startTimeCB" layoutX="479.0" layoutY="201.0" onAction="#populateEndTimes" prefHeight="25.0" prefWidth="126.0">
+                     <effect>
+                        <DropShadow blurType="ONE_PASS_BOX" />
+                     </effect>
+                  </ComboBox>
+                  <Label layoutX="614.0" layoutY="199.0" prefHeight="27.0" prefWidth="92.0" text="End Time" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="endTimeCB" layoutX="706.0" layoutY="200.0" prefHeight="25.0" prefWidth="126.0">
+                     <effect>
+                        <DropShadow blurType="ONE_PASS_BOX" />
+                     </effect>
+                  </ComboBox>
+                  <Label layoutX="5.0" layoutY="251.0" prefHeight="27.0" prefWidth="109.0" text="Customer ID" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="customerIDCB" layoutX="194.0" layoutY="252.0" prefHeight="25.0" prefWidth="209.0">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ComboBox>
+                  <ComboBox fx:id="locationCB" layoutX="628.0" layoutY="107.0" prefHeight="25.0" prefWidth="183.0">
+                     <effect>
+                        <DropShadow blurType="ONE_PASS_BOX" />
+                     </effect>
+                  </ComboBox>
+                  <HBox layoutX="2.0" layoutY="318.0" prefHeight="157.0" prefWidth="942.0" style="-fx-background-color: #0d5a99;">
+                     <children>
+                        <AnchorPane prefHeight="157.0" prefWidth="946.0" style="-fx-background-color: #0d5a99;">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <children>
+                              <Button fx:id="saveModBtn" layoutX="359.0" layoutY="24.0" mnemonicParsing="false" onAction="#saveAppointment" prefHeight="25.0" prefWidth="225.0" text="Save New Appointment" textFill="#0d5a99">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow blurType="TWO_PASS_BOX" />
+                                 </effect>
+                              </Button>
+                              <Button layoutX="323.0" layoutY="85.0" mnemonicParsing="false" onAction="#returnToMainScreen" prefHeight="30.0" prefWidth="296.0" text="Return  to Main Screen" textFill="#0e8628">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow blurType="TWO_PASS_BOX" />
+                                 </effect>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </HBox>
+                  <Button layoutX="646.0" layoutY="260.0" mnemonicParsing="false" onAction="#resetForm" prefHeight="37.0" prefWidth="183.0" text="Cancel">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <effect>
+                        <DropShadow blurType="ONE_PASS_BOX" />
+                     </effect>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
