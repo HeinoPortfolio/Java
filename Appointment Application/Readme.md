@@ -1,7 +1,8 @@
 # Inventory Application
 ***
 <p>This README file shows the general structure of the Inventory Folder.  Below you will find a general listing of the contents of the each folder in the project.
-<p/>
+</p> 
+<b>Note:The application will not run without the user name and passwrod for the database.  These can be furnished upon request.</b>
 
 1. ### Models Folder - 
  * This will contain code for classes that were used to model the data for the application.
