@@ -11,7 +11,9 @@
 JavaFX| software platform for creating and delivering desktop applications
 FXML | XML-based user interface markup language
 Localities | display text based on user location
-MySQL | relational database
+MySQL | relational database management system
+Room | a persistence library that provides an extra layer of abstraction over the SQLite database.
+XML | markup language that defines the layout for the interfaces used in tha application
 
 1. ### Models Folder - 
  * This will contain code for classes that were used to model the data for the application.
