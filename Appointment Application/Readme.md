@@ -4,6 +4,15 @@
 </p> 
 <b>Note: The application will not run without the username and password for the database.  These can be furnished upon request.</b>
 
+<p>Will make use of the following Technologies:</p>
+
+**Concept or Technology Used**|**Description**
+:-----:|:-----:
+JavaFX| software platform for creating and delivering desktop applications
+FXML | XML-based user interface markup language
+Localities | display text based on user location
+MySQL | relational database
+
 1. ### Models Folder - 
  * This will contain code for classes that were used to model the data for the application.
  * Classes included are: Application Data, Appointments, Contacts, Countries, Customer, First Level Divisions, Users
