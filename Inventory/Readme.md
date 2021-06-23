@@ -11,3 +11,13 @@
 JavaFX| software platform for creating and delivering desktop applications
 FXML | XML-based user interface markup language
 
+1. ### Model Folder - 
+ * This will contain code for classes that were used to model the data for the application.
+ * Classes included are: InHouse, Inventory, OutSourced, Part, Product
+ * Please view each class file for more information about the class.
+2. ### View Controller -
+ * This will contail the FXML files that are used in the design of the UI.
+ *  Files included:  AddPartFXML.fxml, AddPartFXMLController.java, AddProductFXML.fxml, AddProductFXMLController.java, MainFXML.fxml, MainFXMLController.java, ModifyPartFXML.fxml, ModifyPartFXMLController.java, ModifyProductFXML.fxml, ModifyProductFXMLController.fxml.
+3. ### MatthewHeino_InventorySystem -
+  * Contains the main driver file for the application.
+
