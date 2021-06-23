@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="524.0" style="-fx-background-color: lightgrey;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller.MainFXMLController">
+   <children>
+      <VBox layoutX="-6.0" prefHeight="524.0" prefWidth="500.0">
+         <children>
+            <Pane prefHeight="501.0" prefWidth="500.0">
+               <children>
+                  <Label layoutX="23.0" layoutY="21.0" prefHeight="39.0" prefWidth="285.0" text="Inventory Management  System">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutX="30.0" layoutY="81.0" prefHeight="385.0" prefWidth="440.0" style="-fx-border-radius: 20px; -fx-background-color: darkgrey; -fx-border-width: 10px; -fx-background-radius: 20px;">
+                     <children>
+                        <Label layoutX="22.0" layoutY="27.0" prefHeight="17.0" prefWidth="50.0" text="Parts">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="partSearchBtn" layoutX="195.0" layoutY="12.0" mnemonicParsing="false" onAction="#searchPartAction" text="Search">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                        <TextField fx:id="partSearchField" layoutX="270.0" layoutY="12.0" prefHeight="30.0" prefWidth="156.0" promptText="Search by Part ID or Name" />
+                        <TableView fx:id="partsTable" layoutX="22.0" layoutY="60.0" prefHeight="247.0" prefWidth="405.0">
+                          <columns>
+                            <TableColumn fx:id="partIDColumn" prefWidth="75.0" text="Part ID" />
+                            <TableColumn fx:id="partNameColumn" prefWidth="91.0" text="Part Name" />
+                              <TableColumn fx:id="InnventoryLevelColumn" prefWidth="117.0" text="Inventory Level" />
+                              <TableColumn fx:id="pricePerUnitColumn" prefWidth="121.0" text="Price/Cost per Unit" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="addPartBtn" layoutX="225.0" layoutY="335.0" mnemonicParsing="false" onAction="#addPartAction" text="Add">
+                           <effect>
+                              <DropShadow />
+                           </effect></Button>
+                        <Button fx:id="modifyPartBtn" layoutX="277.0" layoutY="335.0" mnemonicParsing="false" onAction="#modifyPartAction" text="Modify">
+                           <effect>
+                              <DropShadow />
+                           </effect></Button>
+                        <Button fx:id="deletePartBtn" layoutX="352.0" layoutY="335.0" mnemonicParsing="false" onAction="#deletePartAction" text="Delete">
+                           <effect>
+                              <DropShadow />
+                           </effect></Button>
+                     </children>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+      <VBox layoutX="492.0" prefHeight="524.0" prefWidth="500.0">
+         <children>
+            <Pane prefHeight="524.0" prefWidth="500.0">
+               <children>
+                  <Pane layoutX="30.0" layoutY="78.0" prefHeight="385.0" prefWidth="440.0" style="-fx-border-radius: 20px; -fx-background-color: darkgrey; -fx-border-width: 10px; -fx-background-radius: 20px;">
+                     <children>
+                        <Label layoutX="22.0" layoutY="15.0" prefHeight="27.0" prefWidth="87.0" text="Products">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="prodSearchBtn" layoutX="174.0" layoutY="12.0" mnemonicParsing="false" onAction="#searchProductAction" text="Search">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                        <TextField fx:id="prodSearchField" layoutX="247.0" layoutY="12.0" prefHeight="30.0" prefWidth="179.0" promptText="Search by Product ID or Name" />
+                        <TableView fx:id="productTable" layoutX="22.0" layoutY="60.0" prefHeight="247.0" prefWidth="405.0">
+                           <columns>
+                              <TableColumn prefWidth="75.0" text="Product ID" />
+                              <TableColumn prefWidth="91.0" text="Product Name" />
+                              <TableColumn prefWidth="117.0" text="Inventory Level" />
+                              <TableColumn prefWidth="121.0" text="Price/Cost per Unit" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="addProdBtn" layoutX="225.0" layoutY="335.0" mnemonicParsing="false" onAction="#addProdAction" text="Add">
+                           <effect>
+                              <DropShadow />
+                           </effect></Button>
+                        <Button fx:id="modifyProductBtn" layoutX="283.0" layoutY="335.0" mnemonicParsing="false" onAction="#modifyProdAction" text="Modify">
+                           <effect>
+                              <DropShadow />
+                           </effect></Button>
+                        <Button fx:id="deleteProdBtn" layoutX="352.0" layoutY="335.0" mnemonicParsing="false" onAction="#deleteProductAction" text="Delete">
+                           <effect>
+                              <DropShadow />
+                           </effect></Button>
+                     </children>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Pane>
+                  <Button fx:id="exitBtn" layoutX="409.0" layoutY="479.0" mnemonicParsing="false" onAction="#exitButtonAction" prefHeight="25.0" prefWidth="61.0" text="Exit">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
