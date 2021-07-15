@@ -2,7 +2,9 @@
 ***
 <p>This README file shows the general structure of the Appointment Application Folder.  Below you will find a general listing of the contents of the each folder in the project.
 </p> 
-<b>Note: The application will not run without the username and password for the database.  These can be furnished upon request.</b>
+<b>Note: The application will not run without the username and password for the database.  These can be furnished upon request.</b><br>
+
+To get a feel for the application please view the user's guide that can be found [here](https://github.com/HeinoPortfolio/Java/blob/master/Appointment%20Application/Appointment%20User%20Guide.pdf).
 
 <p>Will make use of the following technologies:</p>
 
