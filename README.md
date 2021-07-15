@@ -8,7 +8,7 @@
   * Will make use of locale settings.  Will display some text in French if the user is located in a French speaking area.
   * <b> A user guide has been uploaded. </b>
 2. ### Inventory Application - 
-  * An inventory application that has a uses a GUI, JavaFX, FXML to create an appointment application. 
+  * An inventory application that has a uses a GUI, JavaFX, FXML to create an inventory application. 
 3. ### Java Basics - 
  * This will contain code for reviewing the basics of the Java Programming Language.
  * Basic items of the language like control structures.
