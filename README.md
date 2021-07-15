@@ -6,7 +6,7 @@
 1. ### Appointment Application - 
   * An appointment application that has a uses a GUI, JavaFX, FXML to create an appointment application. 
   * Will make use of locale settings.  Will display some text in French if the user is located in a French speaking area.
-  * <b> A user guide will be uploaded shortly. </b>
+  * <b> A user guide has been uploaded. </b>
 2. ### Inventory Application - 
   * An inventory application that has a uses a GUI, JavaFX, FXML to create an appointment application. 
 3. ### Java Basics - 
