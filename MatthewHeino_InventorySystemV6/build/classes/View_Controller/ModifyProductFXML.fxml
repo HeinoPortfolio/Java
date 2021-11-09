@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="757.0" prefWidth="1055.0" style="-fx-background-color: lightgrey;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller.ModifyProductFXMLController">
+   <children>
+      <HBox layoutX="34.0" layoutY="29.0" prefHeight="700.0" prefWidth="987.0" style="-fx-background-color: darkgrey; -fx-background-radius: 10px; -fx-border-width: 10px;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <VBox prefHeight="200.0" prefWidth="452.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="52.0" prefWidth="452.0">
+                     <children>
+                        <Label prefHeight="35.0" prefWidth="198.0" text="Modify Product">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <AnchorPane prefHeight="601.0" prefWidth="452.0">
+                     <children>
+                        <GridPane layoutX="17.0" layoutY="28.0" prefHeight="324.0" prefWidth="418.0" style="-fx-background-color: lightgrey;">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="122.0" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="159.0" minWidth="10.0" prefWidth="114.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="159.0" minWidth="10.0" prefWidth="54.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="159.0" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="ID">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets left="10.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label text="Name" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets left="10.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label layoutX="10.0" layoutY="65.0" prefHeight="27.0" prefWidth="92.0" text="Inventory" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets left="10.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <TextField fx:id="prodIDTF" editable="false" prefHeight="25.0" prefWidth="134.0" promptText=" Auto Generated" text="Auto Generated" GridPane.columnIndex="1">
+                                 <GridPane.margin>
+                                    <Insets left="5.0" right="5.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="productNameTF" layoutX="105.0" layoutY="23.0" prefHeight="25.0" prefWidth="134.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets left="5.0" right="5.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="inventoryTF" layoutX="105.0" layoutY="73.0" prefHeight="25.0" prefWidth="134.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets left="5.0" right="50.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <Label layoutX="20.0" layoutY="72.0" text="Price" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets left="10.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label layoutX="20.0" layoutY="172.0" text="Max" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets left="10.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <TextField fx:id="priceTF" layoutX="137.0" layoutY="123.0" prefHeight="25.0" prefWidth="134.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <GridPane.margin>
+                                    <Insets right="50.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="maxTF" layoutX="132.0" layoutY="173.0" prefHeight="25.0" prefWidth="134.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                 <GridPane.margin>
+                                    <Insets right="50.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <Label layoutX="20.0" layoutY="221.0" text="Min" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </Label>
+                              <TextField fx:id="minTF" layoutX="123.0" layoutY="237.0" prefHeight="25.0" prefWidth="134.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                                 <GridPane.margin>
+                                    <Insets right="50.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                           </children>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+            <VBox prefHeight="700.0" prefWidth="537.0">
+               <children>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="61.0" prefWidth="460.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#searchPartAction" text="Search">
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="searchField">
+                           <HBox.margin>
+                              <Insets right="75.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </HBox>
+                  <AnchorPane prefHeight="641.0" prefWidth="536.0">
+                     <children>
+                        <TableView fx:id="partsModifyTable" layoutX="76.0" layoutY="23.0" prefHeight="200.0" prefWidth="385.0">
+                          <columns>
+                            <TableColumn fx:id="partIDColumn" prefWidth="75.0" text="Part ID" />
+                            <TableColumn fx:id="partNameColumn" prefWidth="75.0" text="Part Name" />
+                              <TableColumn fx:id="inventoryColumn" prefWidth="105.0" text="Inventory Level" />
+                              <TableColumn fx:id="pricePerUnitColumn" prefWidth="129.0" text="Price/Cost Per Unit" />
+                          </columns>
+                        </TableView>
+                        <Button layoutX="378.0" layoutY="241.0" mnemonicParsing="false" onAction="#addAssociatedPart" prefHeight="27.0" prefWidth="83.0" text="Add">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <TableView fx:id="AssociatedPartTable" layoutX="76.0" layoutY="302.0" prefHeight="200.0" prefWidth="385.0">
+                          <columns>
+                            <TableColumn fx:id="associatedPartIDColumn" prefWidth="75.0" text="Part ID" />
+                            <TableColumn fx:id="associatedPartNameColumn" prefWidth="75.0" text="Part Name " />
+                              <TableColumn fx:id="associatedInventoryColumn" prefWidth="93.0" text="Inventory Level" />
+                              <TableColumn fx:id="associatedPricePerUnitColumn" prefWidth="139.0" text="Price/Cost Per Unit" />
+                          </columns>
+                        </TableView>
+                        <Button layoutX="259.0" layoutY="522.0" mnemonicParsing="false" onAction="#removeAssociatedPart" prefHeight="35.0" prefWidth="202.0" text="Remove Associated Part">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="259.0" layoutY="571.0" mnemonicParsing="false" onAction="#saveModifiedProduct" text="Save">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="399.0" layoutY="573.0" mnemonicParsing="false" onAction="#cancelModifyProduct" prefHeight="25.0" prefWidth="62.0" text="Cancel" />
+                     </children>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </children></HBox>
+   </children>
+</AnchorPane>
